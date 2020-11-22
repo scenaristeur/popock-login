@@ -1,0 +1,26 @@
+{
+  "name": "popock-login",
+  "version": "1.0.0",
+  "description": "https://cli.vuejs.org/guide/prototyping.html\r ```\r npm install -g @vue/cli @vue/cli-service-global\r ```",
+  "main": "index.js",
+  "dependencies": {
+    "solid-auth-client": "^2.5.3",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vue build -t wc-async --name popock-login PopockLogin.vue",
+    "serve": "vue serve PopockLogin.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scenaristeur/popock-login.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scenaristeur/popock-login/issues"
+  },
+  "homepage": "https://github.com/scenaristeur/popock-login#readme"
+}
