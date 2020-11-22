@@ -1,5 +1,6 @@
 <template>
   <div>
+    popock login
     <button v-if="webId == null" @click="login">login</button>
     <button v-else @click="logout">logout</button>
 
@@ -7,12 +8,12 @@
   </div>
 </template>
 <script>
-import store from './store'
+//import store from './store'
 import auth from 'solid-auth-client';
 const popUri = 'https://solidcommunity.net/common/popup.html'
 
 export default {
-  store,
+  //store,
   name: 'Popock-Login',
   data: function () {
     return {
@@ -22,7 +23,7 @@ export default {
   created(){
     this.trackSession()
     console.log('Popock-login created')
-    this.storage = this.$store.state.login.storage
+    //this.storage = this.$store.state.login.storage
     this.login()
 
     auth.fetch('https://timbl.com/timbl/Public/friends.ttl')
@@ -41,7 +42,7 @@ export default {
           this.webId = session.webId
         }
         console.log("TRACK ", this.webId)
-        this.$store.commit('login/setWebId', this.webId)
+      //  this.$store.commit('login/setWebId', this.webId)
       });
     },
     async logout(){
