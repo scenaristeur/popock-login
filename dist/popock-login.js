@@ -15370,12 +15370,12 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"237d707c-vue-loader-template"}!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib??vue-loader-options!./PopockLogin.vue?vue&type=template&id=40c0b339&shadow
+// CONCATENATED MODULE: C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"237d707c-vue-loader-template"}!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib??vue-loader-options!./PopockLogin.vue?vue&type=template&id=06238280&shadow
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.webId == null)?_c('button',{on:{"click":_vm.login}},[_vm._v("login")]):_c('button',{on:{"click":_vm.logout}},[_vm._v("logout")])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./PopockLogin.vue?vue&type=template&id=40c0b339&shadow
+// CONCATENATED MODULE: ./PopockLogin.vue?vue&type=template&id=06238280&shadow
 
 // EXTERNAL MODULE: C:/Users/Smag/AppData/Roaming/npm/node_modules/@vue/cli-service-global/node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__("4e14");
@@ -15471,12 +15471,12 @@ var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 //
 //
 //
-//
 
 
 var popUri = 'https://solidcommunity.net/common/popup.html';
 /* harmony default export */ var lib_vue_loader_options_PopockLoginvue_type_script_lang_js_shadow = ({
   store: store,
+  props: ['debug'],
   name: 'Popock-Login',
   data: function data() {
     return {
@@ -15484,13 +15484,11 @@ var popUri = 'https://solidcommunity.net/common/popup.html';
     };
   },
   created: function created() {
+    console.log("DEBUG", this.debug);
     this.trackSession();
-    console.log('Popock-login created');
-    this.storage = this.$store.state.login.storage;
+    console.log('Popock-login created'); //this.storage = this.$store.state.login.storage
+
     this.login();
-    browser_default.a.fetch('https://timbl.com/timbl/Public/friends.ttl').then(console.log);
-    var fetch = browser_default.a.fetch;
-    fetch('https://timbl.com/timbl/Public/friends.ttl').then(console.log);
   },
   methods: {
     trackSession: function trackSession() {
@@ -15508,7 +15506,7 @@ var popUri = 'https://solidcommunity.net/common/popup.html';
                     _this.webId = session.webId;
                   }
 
-                  console.log("TRACK ", _this.webId);
+                  console.log("TRACK SESSION", _this.webId);
 
                   _this.$store.commit('login/setWebId', _this.webId);
                 });
@@ -15534,9 +15532,8 @@ var popUri = 'https://solidcommunity.net/common/popup.html';
 
               case 2:
                 _this2.webId;
-                console.log("out", _this2.webId);
 
-              case 4:
+              case 3:
               case "end":
                 return _context2.stop();
             }
@@ -15571,9 +15568,6 @@ var popUri = 'https://solidcommunity.net/common/popup.html';
                 session = _context3.sent;
 
               case 7:
-                console.log("Logged in as ".concat(session.webId, "."));
-
-              case 8:
               case "end":
                 return _context3.stop();
             }
